@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:test_1/viewmodels/blog_viewmodel.dart';
-import 'package:test_1/widgets/blog_card.dart';
 import 'package:test_1/widgets/buttom_nav_widget.dart';
 
 class BlogListScreen extends StatelessWidget {
@@ -175,6 +174,7 @@ class BlogListScreen extends StatelessWidget {
       ),
       bottomNavigationBar: Stack(
         children: [
+          // ignore: avoid_types_as_parameter_names
           CustomBottomNavigationBar(currentIndex: 0, onTap: (int) {}),
           Positioned(
             left: 345,
