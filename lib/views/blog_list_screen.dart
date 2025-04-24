@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:test_1/viewmodels/blog_viewmodel.dart';
-import 'package:test_1/widgets/buttom_nav_widget.dart';
 
 class BlogListScreen extends StatefulWidget {
   const BlogListScreen({super.key});
@@ -15,7 +14,6 @@ class _BlogListScreenState extends State<BlogListScreen> {
   @override
   Widget build(BuildContext context) {
     final blogs = context.watch<BlogViewModel>().blogs;
-    int _selectedIndex = 0;
 
     return Scaffold(
       appBar: AppBar(
