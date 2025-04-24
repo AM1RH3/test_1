@@ -16,14 +16,14 @@ final GoRouter router = GoRouter(
           builder: (context, state) => const BlogListScreen(),
         ),
         GoRoute(path: '/map', builder: (context, state) => const MapScreen()),
+        GoRoute(
+          path: '/blog/:id',
+          builder: (context, state) {
+            final id = state.pathParameters['id']!;
+            return BlogDetailScreen(blogId: id);
+          },
+        ),
       ],
-    ),
-    GoRoute(
-      path: '/blog/:id',
-      builder: (context, state) {
-        final id = state.pathParameters['id']!;
-        return BlogDetailScreen(blogId: id);
-      },
     ),
   ],
 );

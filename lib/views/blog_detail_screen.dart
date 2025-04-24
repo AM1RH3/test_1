@@ -16,7 +16,7 @@ class BlogDetailScreen extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, size: 35),
-          onPressed: () => context.go('/'),
+          onPressed: () => context.go('/blog'),
         ),
       ),
       body: SingleChildScrollView(
