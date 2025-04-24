@@ -30,19 +30,17 @@ class CustomBottomNavigationBar extends StatelessWidget {
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: _buildNavItem(
-                label: 'Featured',
-                isActive: currentIndex == 1,
-              ),
+              icon: _buildNavItem(label: 'Map', isActive: currentIndex == 1),
               label: '',
             ),
 
             BottomNavigationBarItem(
               icon: _buildNavItem(
                 label: 'Premium',
-                isActive: currentIndex == 4,
+                isActive: currentIndex == 2,
               ),
               label: '',
+
             ),
           ],
         ),
@@ -52,11 +50,10 @@ class CustomBottomNavigationBar extends StatelessWidget {
 
   Widget _buildNavItem({required String label, required bool isActive}) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        SizedBox(width: 30),
+        SizedBox(width: 45),
         Column(
-          // mainAxisSize: MainAxisSize.min,
           children: [
             const SizedBox(height: 5),
             Text(
@@ -75,3 +72,4 @@ class CustomBottomNavigationBar extends StatelessWidget {
     );
   }
 }
+

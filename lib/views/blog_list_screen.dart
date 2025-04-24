@@ -4,12 +4,18 @@ import 'package:provider/provider.dart';
 import 'package:test_1/viewmodels/blog_viewmodel.dart';
 import 'package:test_1/widgets/buttom_nav_widget.dart';
 
-class BlogListScreen extends StatelessWidget {
+class BlogListScreen extends StatefulWidget {
   const BlogListScreen({super.key});
 
   @override
+  State<BlogListScreen> createState() => _BlogListScreenState();
+}
+
+class _BlogListScreenState extends State<BlogListScreen> {
+  @override
   Widget build(BuildContext context) {
     final blogs = context.watch<BlogViewModel>().blogs;
+    int _selectedIndex = 0;
 
     return Scaffold(
       appBar: AppBar(
@@ -168,22 +174,6 @@ class BlogListScreen extends StatelessWidget {
                   ),
                 );
               },
-            ),
-          ),
-        ],
-      ),
-      bottomNavigationBar: Stack(
-        children: [
-          // ignore: avoid_types_as_parameter_names
-          CustomBottomNavigationBar(currentIndex: 0, onTap: (int) {}),
-          Positioned(
-            left: 345,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.amber[500],
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Text('  Pro  '),
             ),
           ),
         ],
